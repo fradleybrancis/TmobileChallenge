@@ -55,13 +55,3 @@ class PostViewModel {
     }
     
 }
-
-
-//extension AlbumViewModel {
-//    static func == (lhs: AlbumViewModel, rhs: AlbumViewModel) -> Bool {
-//        return lhs.albumName == rhs.albumName
-//    }
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(albumName)
-//    }
-//}

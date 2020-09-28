@@ -17,8 +17,8 @@ class TMobileCodeChallengeTests: XCTestCase {
         if let path = testBundle.path(forResource: "mockData", ofType: "json") {
             if let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped) {
                 let decoder = JSONDecoder()
-                let albumResponses = try? decoder.decode(Feed.self, from: jsonData)
-                sut = albumResponses
+                let postResponse = try? decoder.decode(Feed.self, from: jsonData)
+                sut = postResponse
             }
         }
     }
