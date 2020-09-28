@@ -10,13 +10,11 @@ import Foundation
 class FeedRequest {
     
     let resourceURL: URL
-//    var pagination: Bool
     
     init(pagination: Bool, afterLink: String = "") {
         let resourceString = pagination ? "http://www.reddit.com/.json?after=\(afterLink)" : "http://www.reddit.com/.json"
         guard let resourceURL = URL(string: resourceString) else { fatalError() }
         self.resourceURL = resourceURL
-//        self.pagination = pagination
     }
     
     func getPosts(completion: @escaping (Result<[Post], FeedRequestError>) -> Void) {
